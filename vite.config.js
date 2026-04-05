@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/mcp-explorer/',
+  base: '/mcp_enterprise_explorer/',
   plugins: [react()],
 })

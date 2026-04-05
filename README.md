@@ -19,12 +19,12 @@ If you are developing a production application, we recommend using TypeScript wi
 
 This project is configured for GitHub Pages with a project-site base path:
 
-- `vite.config.js` uses `base: '/mcp-explorer/'`
+- `vite.config.js` uses `base: '/mcp_enterprise_explorer/'`
 - GitHub Actions workflow: `.github/workflows/deploy.yml`
 
 ### One-time GitHub setup
 
-1. Push this project to a GitHub repository (recommended repo name: `mcp-explorer`).
+1. Push this project to a GitHub repository (current repo: `mcp_enterprise_explorer`).
 2. In GitHub, open **Settings → Pages**.
 3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 4. Push to the `main` branch (or run the workflow manually from the **Actions** tab).
