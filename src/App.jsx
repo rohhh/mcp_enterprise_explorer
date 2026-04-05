@@ -1095,15 +1095,6 @@ When the user gives a scenario, respond with a concise, bulleted workflow. Menti
           </div>
 
           <div className="flex items-center gap-2">
-            {/* ✨ Assistant Toggle */}
-            <button
-              onClick={() => setIsAssistantOpen(true)}
-              className="flex items-center gap-2 px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 rounded-lg font-medium text-sm transition-colors focus:outline-none"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span className="hidden sm:inline">AI Assistant</span>
-            </button>
-
             {/* Theme Toggle */}
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
@@ -1247,22 +1238,6 @@ When the user gives a scenario, respond with a concise, bulleted workflow. Menti
                               <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                                 <Code className="w-3.5 h-3.5" /> Input Schema
                               </h4>
-                              
-                              {/* ✨ Generate Example Payload Button */}
-                              {tool.parameters.length > 0 && (
-                                <button
-                                  onClick={() => handleGeneratePayload(tool)}
-                                  disabled={mockPayloads[tool.id]?.loading}
-                                  className="text-xs font-medium flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white rounded-full shadow-sm disabled:opacity-50 transition-all focus:outline-none"
-                                >
-                                  {mockPayloads[tool.id]?.loading ? (
-                                    <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                                  ) : (
-                                    <Sparkles className="w-3.5 h-3.5" />
-                                  )}
-                                  Generate Example
-                                </button>
-                              )}
                             </div>
                             
                             <div className="bg-slate-900 rounded-lg overflow-hidden shadow-inner flex flex-col h-full min-h-[200px]">
