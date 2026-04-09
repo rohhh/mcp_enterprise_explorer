@@ -269,19 +269,20 @@ export default function App() {
                   <li>Always add the Brave tool when available (not just to check the date or search for general things), as finding information not covered by other tools can save an entire task.</li>
                   <li>Select the correct category and target for your rubrics; the reviewer will thank you.</li>
                   <li>Add <strong>N/A</strong> to the agent rubrics evaluation if there are no issues.</li>
-                  <li>If the agent executed a flawless trajectory but did not include the assistant messages, its maximum score is a 4. Use the error category <strong>"Others"</strong> and add a short explanation: <em>"The trajectory is good, but it is missing the assistant messages."</em></li>
+                  <li>If the agent executed a flawless trajectory but did not include the assistant messages, its maximum score is 4. Use the error category <strong>"Others"</strong> and add a short explanation: <em>"The trajectory is good, but it is missing the assistant messages."</em></li>
                 </ul>
               </div>
 
               {/* Inferior Block: Tips to avoid fails */}
               <div className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
                 <h4 className="text-md font-bold text-slate-800 dark:text-slate-100 mb-3 flex items-center gap-2">
-                   <Activity className="w-4 h-4 text-rose-500" /> Tips to avoid fails
+                   <Activity className="w-4 h-4 text-rose-500" /> Tips to avoid failures
                 </h4>
                 <ul className="list-disc pl-5 space-y-2 text-sm text-slate-600 dark:text-slate-300">
                   <li>Experiment with the tools in the playground to understand what output to expect; this will help you craft the history of your task effectively.</li>
                   <li>Keep your questions focused and avoid being too broad. Always remember that you need to create rubrics for each case. Instead of asking how the universe was born or listing all the stars, ask for the planets in the solar system—or even better, the planets in the solar system larger than Earth. This provides a deterministic request that is easy to evaluate.</li>
                   <li>Check for redundant information across similar tool outputs. If you call one tool and a subsequent call yields the exact same information, it is considered a fail.</li>
+                  <li>Avoid using writing tools (tools that modify the environment). We are strictly using reading tools in this project so far.</li>
                   <li>Always ensure a tool call has a <strong>Tool Selection</strong> rubric, at least one <strong>Query Construction</strong> rubric, and at least one <strong>Multi-Step Planning</strong> rubric (this is often missed). Additionally, include one <strong>Outcome Rubric</strong> per prompt request.</li>
                 </ul>
               </div>
@@ -329,7 +330,7 @@ export default function App() {
           {selectedDataset === 'professional' && (
             <div className="mt-3 text-xs text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 p-2.5 rounded-md border border-amber-200 dark:border-amber-800/50 leading-relaxed shadow-sm">
               <Info className="w-3.5 h-3.5 inline mr-1 mb-0.5" />
-              Some tools have limitations. Check <a href="https://psinghal20.github.io/persona-mock-data/tools/professional/" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-amber-800 dark:hover:text-amber-300">here</a>.
+              Some tools have limitations. Check them <a href="https://psinghal20.github.io/persona-mock-data/tools/professional/" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-amber-800 dark:hover:text-amber-300">here</a>.
             </div>
           )}
         </div>
