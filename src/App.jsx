@@ -330,7 +330,8 @@ export default function App() {
           {selectedDataset === 'professional' && (
             <div className="mt-3 text-xs text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 p-2.5 rounded-md border border-amber-200 dark:border-amber-800/50 leading-relaxed shadow-sm">
               <Info className="w-3.5 h-3.5 inline mr-1 mb-0.5" />
-              Some tools have limitations. Check them <a href="https://psinghal20.github.io/persona-mock-data/tools/professional/" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-amber-800 dark:hover:text-amber-300">here</a>.
+              <span className="block">Some tools have limitations.</span>
+              <span className="block">Check them <a href="https://psinghal20.github.io/persona-mock-data/tools/professional/" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-amber-800 dark:hover:text-amber-300">here</a>.</span>
             </div>
           )}
         </div>
