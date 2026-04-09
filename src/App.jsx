@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Search, Server, Wrench, Menu, X, ChevronDown, ChevronUp, Database, Activity, Code, Info, Layers, Sun, Moon, Loader2, FileJson, Upload, Lightbulb } from 'lucide-react';
+import { Search, Server, Wrench, Menu, X, ChevronDown, ChevronUp, Database, Activity, Code, Info, Layers, Sun, Moon, Loader2, FileJson, Upload, Lightbulb, Sparkles } from 'lucide-react';
 
 // Custom Eye of Horus Icon
 const HorusIcon = ({ className }) => (
