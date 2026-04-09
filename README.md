@@ -1,44 +1,36 @@
-# React + Vite
+# Horus MCP Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Vite dashboard for exploring MCP servers and healthcare tools used in the Horus project.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse available MCP servers and tool groups
+- Inspect tool names, descriptions, and input schemas
+- Search and filter tools quickly
+- Provide a clean explorer-style interface for the Horus workspace
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Lucide icons
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
 
-## Deploy to GitHub Pages
+## Available scripts
 
-This project is configured for GitHub Pages with a project-site base path:
+- npm run dev: start the development server
+- npm run build: create a production build
+- npm run preview: preview the production build locally
+- npm run lint: run ESLint
 
-- `vite.config.js` uses `base: '/mcp_enterprise_explorer/'`
-- GitHub Actions workflow: `.github/workflows/deploy.yml`
+## Notes
 
-### One-time GitHub setup
-
-1. Push this project to a GitHub repository (current repo: `mcp_enterprise_explorer`).
-2. In GitHub, open **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Push to the `main` branch (or run the workflow manually from the **Actions** tab).
-
-### If your repository name is different
-
-Update `base` in `vite.config.js` to match your repo name:
-
-- Repo `my-dashboard` → `base: '/my-dashboard/'`
-
-## Local pre-deploy checks
-
-Run these before pushing to GitHub:
-
-- Start dev server: `npm run dev`
-- Create production build: `npm run build`
-- Preview the production build locally: `npm run preview`
+- The app is configured with a Vite base path for GitHub Pages deployment in vite.config.js.
+- Update the base path if the repository name changes.
